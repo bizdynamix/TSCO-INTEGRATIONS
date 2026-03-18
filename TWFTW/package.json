@@ -1,0 +1,13 @@
+{
+  "name": "twftw-monday",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fetch": "node fetch-reports.js",
+    "dry-run": "node import-reports.js --dry-run",
+    "import": "node import-reports.js",
+    "dedup": "node dedup-files.js --dry-run",
+    "dedup:live": "node dedup-files.js",
+    "check-empty": "node check-empty-items.js"
+  }
+}

@@ -1,0 +1,12 @@
+## Credentials
+TWFTW/monday-secret.json
+MONDAY-SHAREPOINT/.env
+
+## Generated output
+TWFTW/output/
+MONDAY-SHAREPOINT/downloads/
+
+## Runtime
+__pycache__/
+node_modules/
+*.log
