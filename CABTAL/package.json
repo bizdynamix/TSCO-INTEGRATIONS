@@ -1,0 +1,25 @@
+{
+  "name": "cabtal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "explore:boards": "node explore-boards.js --items",
+    "explore:xlsx": "node explore-xlsx.js",
+    "transform": "node transform-people.js && node transform-gifts.js",
+    "review": "node review-unmatched.js",
+    "review:csv": "node review-unmatched.js --csv",
+    "import:dry-run": "node import-people.js --dry-run && node import-gifts.js --dry-run",
+    "import:people": "node import-people.js",
+    "import:gifts": "node import-gifts.js",
+    "transform:orgs": "node transform-orgs.js",
+    "import:orgs": "node import-orgs.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

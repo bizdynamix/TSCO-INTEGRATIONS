@@ -1,12 +1,52 @@
-## Credentials
-TWFTW/monday-secret.json
-MONDAY-SHAREPOINT/.env
-
-## Generated output
-TWFTW/output/
-MONDAY-SHAREPOINT/downloads/
-
-## Runtime
-__pycache__/
+# Dependencies
 node_modules/
+
+# Credentials & secrets (all subdirectories)
+**/monday-secret.json
+credentials.json
+private_keys/
+*.pem
+*.key
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Generated output (each integration writes to output/)
+**/output/
+
+# Source data files (large, not code)
+**/*.xlsx
+**/*.xlsm
+**/*.csv
+
+# Runtime / logs
+__pycache__/
 *.log
+*.pyc
+
+# IDE / editor
+.vscode/
+.idea/
+.claude/
+.kilocode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+**/*.zip
+
+# Archives and backups
+archive/
+backups/
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*

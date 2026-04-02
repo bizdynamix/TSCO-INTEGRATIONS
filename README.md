@@ -24,32 +24,28 @@ node import-reports.js            # run
 
 ---
 
-## MONDAY-SHAREPOINT/
+## CABTAL/
 
-**Monday.com → SharePoint**
+**DCSE CRM Data Integration**
 
-Migrates Language Profile documents from the Monday.com Partner Projects board to the SharePoint Active Projects site. Completed as a bulk migration in Jan 2026; scripts remain for re-runs and future syncs.
+Imports organizations, people, and gift data from Excel into the Monday.com DCSE CRM board.
 
-- Language: Python 3.11+
-- Source: Monday.com board `8445103301` (Multiplication Language Space)
-- Destination: `seedcompany.sharepoint.com/sites/ActiveProjects`
-- Key scripts: `sync_missing_profiles.py` (full sync), `bulk_migrate_all.py` (original bulk run)
+- Language: Node.js
+- Source: `DCSE_CRM_RM_DATABASE.xlsx`
+- Destination: Monday.com DCSE CRM board
 
-```bash
-cd MONDAY-SHAREPOINT
-pip install -r requirements.txt
-python sync_missing_profiles.py
-```
+---
 
-Reports and audit files are in `MONDAY-SHAREPOINT/reports/`.
+## Monday-SharePoint Migration
+
+> **Note:** The Monday-SharePoint migration project lives in its own standalone repository at `../MONDAY-SHAREPOINT/`. It was removed from this repo to avoid duplication.
 
 ---
 
 ## Credentials
 
-Both integrations require credential files that are **not committed to the repository**:
+Integrations require credential files that are **not committed to the repository**:
 
 | File | Location | Contains |
 |------|----------|---------|
 | `monday-secret.json` | `TWFTW/` | `MONDAY_API_TOKEN`, `ERA_API_KEY` |
-| `.env` | `MONDAY-SHAREPOINT/` | `MONDAY_API_TOKEN`, Azure AD credentials |

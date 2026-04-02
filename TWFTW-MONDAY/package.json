@@ -1,0 +1,10 @@
+{
+  "name": "twftw-monday",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fetch": "node fetch-reports.js",
+    "dry-run": "node import-reports.js --dry-run",
+    "import": "node import-reports.js"
+  }
+}
