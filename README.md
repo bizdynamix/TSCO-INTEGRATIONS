@@ -24,14 +24,6 @@ node import-reports.js            # run
 
 ---
 
-## CABTAL Integration
-
-> **Note:** The CABTAL integration project has been moved to its own standalone repository at [bizdynamix/CABTAL](https://github.com/bizdynamix/CABTAL).
->
-> DCSE CRM data integration (Excel → Monday.com boards) is now maintained as a separate project for easier maintenance and deployment.
-
----
-
 ## Monday-SharePoint Migration
 
 > **Note:** The Monday-SharePoint migration project lives in its own standalone repository at `../MONDAY-SHAREPOINT/`. It was removed from this repo to avoid duplication.

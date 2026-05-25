@@ -1,10 +1,12 @@
 # CLAUDE.md
 
+> **Response rules:** See [global CLAUDE.md](/Users/edwinbrooks/Projects/CLAUDE.md) — communication style, voice, and persona applied to every interaction.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-Node.js project that pulls SCBTF (Scripture-Based Training Fund) quarterly reports from the TWFTW ERA API and imports them into Monday.com boards in the Dev TranTrak workspace. Modeled after the CABTAL project at `../CABTAL/`.
+Node.js project that pulls SCBTF (Scripture-Based Training Fund) quarterly reports from the TWFTW ERA API and imports them into Monday.com boards in the Dev TranTrak workspace.
 
 ## Credentials
 
@@ -69,7 +71,7 @@ ERA API (POST /v1/api/reports/scbtf/)
   → import-reports.js    (create items + upload files to Monday.com board)
 ```
 
-**Monday.com API pattern** (identical to CABTAL):
+**Monday.com API pattern:**
 - All calls: `POST https://api.monday.com/v2`
 - Headers: `Authorization: <token>`, `Content-Type: application/json`, `API-Version: 2024-01`
 - File uploads use `add_file_to_column` mutation with multipart form data (download file from S3, upload to Monday)
@@ -80,8 +82,6 @@ ERA API (POST /v1/api/reports/scbtf/)
 1. Create the item (text, links, testimonials) via `create_item`
 2. Download each file from S3 to a temp path
 3. Upload via `add_file_to_column` mutation
-
-Reference CABTAL's `import-people.js` for the `gql()` helper and pagination patterns.
 
 ## Output Files
 
