@@ -1,0 +1,14 @@
+.gcloudignore
+.git
+.gitignore
+.env
+.venv/
+.temp_venv/
+__pycache__/
+*.pyc
+*.pyo
+downloads/
+reports/
+code.tar.gz
+*.code-workspace
+.DS_Store

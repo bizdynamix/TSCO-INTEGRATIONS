@@ -1,0 +1,83 @@
+{
+  "app_name": "Monday Sharepoint Transporter",
+  "headline": "Sync Language Profiles to SharePoint",
+  "description": "Automatically syncs Language Profile files from Monday.com boards to the correct project folder in SharePoint Active Projects. When a project's Language Status changes to Active, the app uploads the attached Language Profile file to SharePoint — no manual file transfers needed.",
+  "app_version_name": "1.1.0",
+  "features": [
+    {
+      "name": "Language Profile Sync",
+      "type": "Integration",
+      "data": {
+        "base_url": "https://live1-service-12597801-e1067fa2.us.monday.app",
+        "subscribe_url": "/monday/subscribe",
+        "unsubscribe_url": "/monday/unsubscribe",
+        "blocks": [
+          {
+            "id": "syncLanguageProfile",
+            "type": "Action",
+            "editor_type": "function",
+            "name": "Sync the Language Profile to SharePoint",
+            "description": "Uploads the Language Profile file to the project's folder in SharePoint Active Projects",
+            "url": "/monday/action",
+            "timeout": 60000,
+            "input_fields": [
+              {
+                "id": "itemId",
+                "name": "Item",
+                "description": "The board item to sync",
+                "type": "item_id",
+                "required": true
+              },
+              {
+                "id": "boardId",
+                "name": "Board ID",
+                "description": "The board the item belongs to",
+                "type": "board_id",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "recipes": [
+          {
+            "id": "sync-on-status-active",
+            "name": "Sync the Language Profile when status changes to Active",
+            "trigger": {
+              "type": "StatusChangedTrigger",
+              "input_fields": {
+                "boardId": { "source": "trigger", "field": "boardId" },
+                "columnId": { "source": "trigger", "field": "columnId" },
+                "statusValue": { "source": "trigger", "field": "statusValue" }
+              }
+            },
+            "action": {
+              "block_id": "syncLanguageProfile",
+              "input_fields": {
+                "itemId": { "source": "trigger", "field": "itemId" },
+                "boardId": { "source": "trigger", "field": "boardId" }
+              }
+            }
+          },
+          {
+            "id": "sync-on-language-profile-change",
+            "name": "Sync the Language Profile when the file column changes",
+            "trigger": {
+              "type": "ColumnValueChangedTrigger",
+              "input_fields": {
+                "boardId": { "source": "trigger", "field": "boardId" },
+                "columnId": { "source": "trigger", "field": "columnId" }
+              }
+            },
+            "action": {
+              "block_id": "syncLanguageProfile",
+              "input_fields": {
+                "itemId": { "source": "trigger", "field": "itemId" },
+                "boardId": { "source": "trigger", "field": "boardId" }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
