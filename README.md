@@ -24,15 +24,11 @@ node import-reports.js            # run
 
 ---
 
-## CABTAL/
+## CABTAL Integration
 
-**DCSE CRM Data Integration**
-
-Imports organizations, people, and gift data from Excel into the Monday.com DCSE CRM board.
-
-- Language: Node.js
-- Source: `DCSE_CRM_RM_DATABASE.xlsx`
-- Destination: Monday.com DCSE CRM board
+> **Note:** The CABTAL integration project has been moved to its own standalone repository at [bizdynamix/CABTAL](https://github.com/bizdynamix/CABTAL).
+>
+> DCSE CRM data integration (Excel → Monday.com boards) is now maintained as a separate project for easier maintenance and deployment.
 
 ---
 
