@@ -28,6 +28,16 @@ __pycache__/
 
 # IDE / editor
 .vscode/
+
+# Claude / Copilot documentation (local only)
+CLAUDE.md
+**/CLAUDE.md
+copilot-instructions.md
+**/copilot-instructions.md
+.prompt.md
+**/.prompt.md
+.agent.md
+**/.agent.md
 .idea/
 .claude/
 .kilocode/
