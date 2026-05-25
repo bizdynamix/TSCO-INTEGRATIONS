@@ -24,9 +24,21 @@ node import-reports.js            # run
 
 ---
 
-## Monday-SharePoint Migration
+## Standalone Projects
 
-> **Note:** The Monday-SharePoint migration project lives in its own standalone repository at `../MONDAY-SHAREPOINT/`. It was removed from this repo to avoid duplication.
+The following projects have been extracted to their own repositories to improve maintainability:
+
+### CABTAL (CRM Migration)
+- **Repo:** [bizdynamix/CABTAL](https://github.com/bizdynamix/CABTAL)
+- **Purpose:** DCSE donor data migration (Excel → Monday.com)
+
+### LUMEN-AFRICA-MIGRATION
+- **Repo:** [bizdynamix/LUMEN-AFRICA-MIGRATION](https://github.com/bizdynamix/LUMEN-AFRICA-MIGRATION)
+- **Purpose:** Lumen Africa workspace data migration automation
+
+### MONDAY-SHAREPOINT Integration
+- **Repo:** [bizdynamix/monday-sharepoint](https://github.com/bizdynamix/monday-sharepoint)
+- **Purpose:** Monday.com ↔ SharePoint sync automation
 
 ---
 
