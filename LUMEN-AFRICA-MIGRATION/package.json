@@ -1,0 +1,25 @@
+{
+  "name": "lumen-africa-migration",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "audit": "node scripts/audit-sc-workspace.js",
+    "audit:automation": "node scripts/audit-automation-surface.js",
+    "export": "node scripts/export-board.js",
+    "download": "node scripts/download-attachments.js",
+    "import": "node scripts/import-board.js",
+    "import:dry": "node scripts/import-board.js --dry-run",
+    "summary": "node scripts/summarize-boards.js",
+    "execute": "node scripts/execute-import.js",
+    "execute:dry": "node scripts/execute-import.js --dry-run",
+    "migrate-docs": "node scripts/migrate-docs.js",
+    "migrate-docs:dry": "node scripts/migrate-docs.js --dry-run",
+    "mirror-layout": "node scripts/mirror-workspace-layout.js",
+    "mirror-layout:dry": "node scripts/mirror-workspace-layout.js --dry-run",
+    "check-monday": "node scripts/check-monday-connection.js",
+    "place-boards": "node scripts/place-boards-in-folders.js",
+    "place-boards:dry": "node scripts/place-boards-in-folders.js --dry-run",
+    "automation-guide": "node scripts/generate-automation-guide.js"
+  }
+}
